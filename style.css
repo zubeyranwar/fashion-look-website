@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Montreal";
+  src: url("/PPNeueMontreal-Medium.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 30% 50% 20%;
+  width: 100%;
+  height: 100%;
+  font-family: "Montreal";
+}
+
+.top-left {
+  /* background-color: blue; */
+  padding: 40px;
+}
+
+.square {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.top-right {
+  /* background-color: red; */
+  justify-self: right;
+  padding: 40px;
+  text-align: right;
+}
+
+.top-right h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.top-right h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu {
+  display: none;
+}
+
+.menu i {
+  font-size: 25px;
+  color: #222;
+}
+
+.center {
+  grid-column: 1/3;
+  /* background-color: blueviolet; */
+  padding: 40px;
+}
+
+.center h1 {
+  font-size: 6vw;
+  line-height: 5vw;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  border: 2px soid green;
+}
+
+.center h1:nth-child(2n) {
+  text-align: center;
+}
+
+.right {
+  grid-column: 3;
+  grid-row: 1/4;
+  /* background-color: crimson; */
+  padding: 40px;
+  padding-right: 80px;
+}
+
+.right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom {
+  grid-row: 3;
+  grid-column: 1/3;
+  /* background-color: brown; */
+  padding: 40px;
+}
+
+.bottom p {
+  width: 70%;
+  color: #666;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%);
+  background-color: rgb(235, 98, 35);
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.arrow i {
+  font-size: 30px;
+}
+
+@media (max-width: 640px) {
+  .main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px 30% 10%;
+  }
+
+  .right {
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+
+  .top-left {
+    padding: 20px;
+  }
+
+  .top-right {
+    padding: 20px;
+  }
+
+  .top-right h4,
+  .top-right h5 {
+    display: none;
+  }
+
+  .menu {
+    display: initial;
+  }
+
+  .center {
+    padding: 20px;
+  }
+
+  .center h1 {
+    font-size: 12vw;
+    line-height: 11vw;
+  }
+
+  .center h1:nth-child(2n){
+    text-align: right;
+  }
+
+  .bottom {
+    padding: 0px 20px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 54%;
+    left: 45%;
+    transform: rotate(90deg) translate(-50%);
+    padding: 2.5px;
+  }
+
+  .right {
+    height: 60%;
+    padding: 20px;
+  }
+}
